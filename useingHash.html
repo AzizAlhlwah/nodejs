@@ -1,0 +1,144 @@
+<html>
+	<head></head>
+
+	<style type="text/css">
+	
+	 #TagName {
+			background: black;
+			opacity: .5;
+			-moz-opacity: .5;
+			filter: alpha(opacity=50);
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 5;
+			display: none;
+    }
+    #_box {
+			width: 320px;
+			height: 200px;
+			border: 1px white solid:
+			background: #5a5a5a;
+			position: fixed;
+			top: 100px;
+			left: 450px;
+			z-index: 10;
+			display: none;
+    }
+	
+	.pupup
+	{
+		padding:10px;
+		background-color: #ffffff;
+		height: 200px;
+		width:450px;
+		border-radius: 10px;
+    }
+	
+	.txtBob
+	{
+		position: relative;
+		border:solid #ccc 1px;
+		top:-10px;
+		left:70px;
+		width:300px;
+	}
+
+	.masgApper
+	{
+		font-family:Arial;
+		color:#ccc;
+		position: relative;
+		top: -15px;
+		left:70px;
+	}
+	
+	.close
+	{
+		font-family:Arial;
+		color:#ccc;
+		position: relative;
+		top:0px;
+		left:430px;
+		cursor:pointer;
+	}
+	
+	.SubNameTag
+	{
+		position: relative;
+		border:solid #ccc 1px;
+		top:-7px;
+		left:70px;
+		width:300px;
+	}
+    </style>
+	
+	<body>
+	<input id="text" type="text" width="400px" >
+	
+	<div id="TagName"></div>
+	<div id="_box">
+	<div  class="pupup">
+		<p id="close" class="close">x</p>						
+		<h2 class="masgApper">Enter Name The Hash Tag</h2>
+		<input class="txtBob" />
+		<button class="SubNameTag">Submit</button>
+		</div>
+	</div>
+	
+	<button onclick="ale();">Alert</button>
+	<button onclick="cli();">Click My</button>
+	<button id="BtnDilo" >Show...</button>
+	<script>
+	
+		var arr = ['Aziz','Ali'];
+		
+		for(var i =0 ; i < arr.length ; i++)
+		{
+			alert(arr[i]);
+		}
+	
+	var text = document.getElementById('text').value;
+	
+	function ale()
+		{
+			var url = text;
+			var hash = url.substring(url.indexOf('#'));
+			
+			alert(hash);
+		}
+		
+	function cli()
+	{
+		
+		//var url = "http://site.com/file.htm#aziz_aziz";
+			var url = text;
+		var hash = url.substring(url.indexOf('#'));
+		
+		alert(hash);
+		
+		
+	}
+	
+	
+		var BtnDilo = document.getElementById('BtnDilo');
+		var TagName = document.getElementById('TagName');
+		var _box = document.getElementById('_box');
+		var close = document.getElementById('close');
+		
+		BtnDilo.onclick =function(){
+		TagName.style.display = "block";
+		_box.style.display = "block";
+			}
+	
+		close.onclick=function(){
+		TagName.style.display = "none";
+		_box.style.display = "none";
+			}
+		
+	
+	</script>
+	</body>
+</html>
