@@ -1,0 +1,33 @@
+
+<html>
+	<head>
+		<script type="text/javascript">
+
+			function Rex(x)
+			{
+				var regx = /<\/?[^>]+>/gi;
+				x = x.replace(regx, " ");
+				
+				//alert(x);
+				
+				return x;
+			}
+			
+			function Enter(s)
+			{
+				var val = prompt("enter Some Value");
+				
+				var s = Rex(val);
+				
+				alert(s);
+			}
+
+		</script>
+		
+		</head>
+	<body>
+			<h1>Plaes Click the Buottm To Enter vlaue </h1>
+		<button id="btn" onclick="Enter();">Enter Value</button>
+		
+	</body>
+</html>
