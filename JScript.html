@@ -1,0 +1,60 @@
+
+<html>
+	<head>
+		<script type="text/javascript">
+			
+			var Value;
+			var	b = document.getElementById('text');
+			
+			
+			function EnterValue()
+			{
+				 var te = "Welome";
+				 //var p = document.createTextNode(te);
+				 var a = document.createElement("p");
+				 a.innerText = "Aziz";
+				 document.body.appendChild(a);
+			}
+			
+			function Rex(x)
+			{
+				var regx = /<\/?[^>]+>/gi;
+				x = x.replace(regx, " ");
+				
+				//alert(x);
+				
+				return x;
+			}
+		
+		
+			function confi()
+			{
+				var val = "<h1> Welcome... </h1>";
+				
+				Rex(val);
+			}
+			
+			
+			function rep()
+			{
+					var text = "Aziz Bin Sliman...";
+			
+					var t = text.replace(/ /g,"_");
+					alert(t);
+			}
+			
+		</script>
+		
+		</head>
+	<body>
+		
+		<p id="text">gghgh</p>
+		<br />
+		<button id="btn" onclick="EnterValue();">Enter Value</button>
+		
+		<input type="submit"  onclick="rep()"/> 
+		
+		<br />
+		<button id="btn" onclick="confi();">Git</button>
+	</body>
+</html>
