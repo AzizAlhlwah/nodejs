@@ -1,0 +1,54 @@
+<html>
+	<head id="header" runat="server">  
+    <title>Using jQuery.load()</title>  
+    <script src="scripts/jquery-1.4.1.min.js" type="text/javascript"></script>      
+    <link href="styles/Standard.css" rel="stylesheet" type="text/css" />  
+    <script src="MainContentForm.js" type="text/javascript"></script>  
+	
+	<script>
+	
+	/// <reference path="scripts/jquery-1.4.1.js" />  
+	$(document).ready(function () {  
+    // External ASPX Page calling  
+    $("#btnLoadDynamic").click(loadDynamic);  
+	});  
+  
+	function loadDynamic() {  
+    $("#dynamic")  
+        .load("DynamicContent.aspx", // URL to call  
+            // POST vars (optional)  
+            {name: $("#txtName").val() },  
+            // Callback function on completion (optional)  
+            function (content) {  
+                // make content visible with effect  
+                $(this).hide().fadeIn("slow");  
+                return false;  
+            });  
+	}
+	
+	</script>
+	</head> 
+	
+	<body>
+		
+		<div class="sample">  
+		Enter your name: <asp:TextBox runat="server" ID="txtName" />  
+		<input type="button" id="btnLoadDynamic"   
+        value="Load Dynamic Content (external ASPX)" />              
+		<div id="dynamic" class="hidden">  
+		
+    </div>      
+</div>
+	
+<div class="notebox">  
+    <p>  
+        Hello 
+    </p>  
+  
+    <p>  
+        This content was dynamicly created at:  
+    </p>  
+</div>  
+
+	</body>
+</html>
