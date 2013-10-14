@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Count characters in text area</title>
+
+<style>
+	#show
+	{
+		color: #ccc;
+	}
+
+</style>
+<script type="text/javascript">
+	function count(){
+	
+			var current = 0;
+			var max = 140;
+			current = parseInt(document.getElementById("text").value.length);
+			var result = max - current;
+				if(result > 0)
+				{
+					document.getElementById("show").innerHTML = result;
+					document.getElementById("btn-send").disabled = false;
+				}
+				else
+				{
+					document.getElementById("show").innerHTML = "<font color='red'>"+ result+"</font>";
+					document.getElementById("btn-send").disabled = true;
+				}
+	}
+	
+	 function disabled()
+	 {
+		document.getElementById("btn-send").disabled = true;
+	 }
+	 
+</script>
+</head>
+	<textarea id="text" cols="20" rows="5" onKeyDown="count()" onKeyUp="count()"></textarea>
+	Remaining character: <b id="show">140</b>
+	
+	<button id="btn-send" >IButton</button>
+</body>
+</html>
