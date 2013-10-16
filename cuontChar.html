@@ -25,6 +25,7 @@
 				else
 				{
 					document.getElementById("show").innerHTML = "<font color='red'>"+ result+"</font>";
+					
 					document.getElementById("btn-send").disabled = true;
 				}
 	}
@@ -40,6 +41,7 @@
 	// Write Char Limet ..
 	<textarea id="text" cols="20" rows="5" onKeyDown="count()" onKeyUp="count()"></textarea>
 	Remaining character: <b id="show">140</b>
+	
 	<button id="btn-send" >IButton</button>
 </body>
 </html>
