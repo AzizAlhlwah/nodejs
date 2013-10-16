@@ -1,0 +1,66 @@
+
+
+    <head>
+
+        <title>:: Twitter Login ::</title>
+
+        <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+					
+            function GetTwitter() {
+
+                $.ajax({
+
+                    type: "POST",
+
+                    url: "https://api.twitter.com/oauth/request_token",
+
+                    beforeSend: SetHeaders,
+
+                    success: function (msg) {
+
+                        alert(msg);
+
+                    },
+
+                    error: function (xhr) {
+
+                        alert("An error occured : " + xhr.status + " " + xhr.statusText);
+
+                    }
+
+                });
+
+            }
+
+     
+
+            function SetHeaders(xhr) {
+
+                xhr.setRequestHeader("oauth_callback", "http://localhost/wwm/default2.asp");
+
+                xhr.setRequestHeader("oauth_consumer_key", "wocUHRgIhSYlKkevmizhyw");
+
+                xhr.setRequestHeader("oauth_nonce", "QP70eNmVz8jvdPevU3oJD2AfF7R7odC2XJcn4XlZJqk");
+
+                xhr.setRequestHeader("oauth_signature_method", "HMAC-SHA1");
+
+                xhr.setRequestHeader("oauth_signature", encodeURI("gSuISr7V9wFHQTcpidzdzwGwSiFamDCug7nAHs3pMeE"));
+
+                xhr.setRequestHeader("oauth_timestamp", "1272323042");
+
+                xhr.setRequestHeader("oauth_version", "1.0");
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <input id="Button1" type="button" value="Get Twitter" onclick="GetTwitter();" />
+
+    </body>
+
