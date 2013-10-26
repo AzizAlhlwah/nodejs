@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Test Page</title>
+    <style>
+    #login_fader {
+			background: black;
+			opacity: .5;
+			-moz-opacity: .5;
+			filter: alpha(opacity=50);
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 5;
+			display: none;
+    }
+    #login_box {
+			width: 320px;
+			height: 200px;
+			border: 1px white solid:
+			background: #5a5a5a;
+			position: fixed;
+			top: 100px;
+			left: 450px;
+			z-index: 10;
+			display: none;
+    }
+	
+	.di
+	{
+		padding:10px;
+		background-color: #ffffff;
+		height: 200px;
+		width:450px;
+		border-radius: 10px;
+    }
+	
+	.imgtwitter
+	{
+		position: relative;
+		top: 20px;
+		left:130px;
+	}
+
+	.masg
+	{
+		font-family:Arial;
+		color:#ccc;
+		position: relative;
+		top: 10px;
+		left:110px;
+	}
+
+	
+    </style>
+    </head>
+    <body id="loginBtn">
+
+			
+				<div id="login_fader"></div>
+					<div id="login_box">
+						<form action="testFadeOut.htm">
+							<div class="di">
+								<h3 class="masg">Welcome! Please log in.</h3>
+								<img class="imgtwitter" src="sign-in-with-twitter-l.png" width="151" height="24">
+							</div>
+						</form>
+					</div>
+
+	
+    <script type="text/javascript">
+    <!--
+		var loginBtn = document.getElementById('loginBtn');
+		var fader = document.getElementById('login_fader');
+		var login_box = document.getElementById('login_box');
+		
+		loginBtn.onload =function(){
+		fader.style.display = "block";
+		login_box.style.display = "block";}
+    // -->
+	
+    </script>
+    </body>
+    </html>
