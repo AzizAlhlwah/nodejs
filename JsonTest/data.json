@@ -1,0 +1,26 @@
+{
+	"p1":{
+			"name":"Aziz",
+			"age":32,
+			"company":"Accc"
+	},
+	
+	"p2":{
+			"name":"Ali",
+			"age":33,
+			"company":"azs"
+	},
+	
+	
+	"p3":{
+			"name":"Addgli",
+			"age":33,
+			"company":"adgzs"
+	},
+	
+		"p4":{
+			"name":"Assddgli",
+			"age":33,
+			"company":"adgzs"
+	}
+}
